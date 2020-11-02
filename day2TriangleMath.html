@@ -32,7 +32,7 @@
         -->
     </form>
 
-    <button class="btn btn-primary" onClick="alert('this works');">Calculate</button>
+    <button class="btn btn-primary" onClick="getData();calcArea();">Calculate</button>
 
 
     <table class="table">
@@ -55,6 +55,39 @@
 
     </table>
 
+    <script>
+        //variable is a way to store data in code
+        //data type - string, int, float, double
+        //JavaScript loosely typed - JS will decide on type
+        var sideA = 0;
+        var sideB = 0;
+        var sideC = 0;
+
+        function getData() {
+            //strip the data from the form
+            //reusable named chunk of code
+            //alert("Get data is working"); //just to prove it calls
+            //three 42 *5
+            //three * 5 - error
+            var inputValue; //use to strip from the screen
+
+            inputValue = document.getElementById("sideA").value;
+            //alert(inputValue);
+            //convert to a number
+            sideA = parseFloat(inputValue);
+
+            inputValue = document.getElementById("sideB").value;
+            //alert(inputValue);
+            //convert to a number
+            sideB = parseFloat(inputValue);
+
+            //use pythagorean theorem to calculate sideC
+            sideC = Math.sqrt(sideA * sideA + sideB * sideB);
+            //display using the hypoNum
+            document.getElementById("hypoNum").innerHTML = sideC;
+
+        }
+    </script>
 
 
     <!-- Optional JavaScript -->
