@@ -32,7 +32,7 @@
         -->
     </form>
 
-    <button class="btn btn-primary" onClick="getData();calcArea();">Calculate</button>
+    <button class="btn btn-primary" onClick="getData();calcPerimeter();calcArea();">Calculate</button>
 
 
     <table class="table">
@@ -56,39 +56,32 @@
     </table>
 
     <script>
-        //variable is a way to store data in code
-        //data type - string, int, float, double
-        //JavaScript loosely typed - JS will decide on type
-        var sideA = 0;
-        var sideB = 0;
-        var sideC = 0;
+        var a = 0;
+        var b = 0;
+        var c = 0;
+
+        function calcPerimeter() {
+            var per = a + b + c;
+            document.getElementById("perimeterNum").innerHTML = per;
+        }
+
+        function calcArea() {
+            var area = a * b / 2;
+            document.getElementById("areaNum").innerHTML = area;
+        }
 
         function getData() {
-            //strip the data from the form
-            //reusable named chunk of code
-            //alert("Get data is working"); //just to prove it calls
-            //three 42 *5
-            //three * 5 - error
-            var inputValue; //use to strip from the screen
+            //strip data from the form
+            a = parseFloat(document.getElementById("sideA").value);
+            b = parseFloat(document.getElementById("sideB").value);
+            //c = parseFloat(document.getElementById("sideC").value);
 
-            inputValue = document.getElementById("sideA").value;
-            //alert(inputValue);
-            //convert to a number
-            sideA = parseFloat(inputValue);
-
-            inputValue = document.getElementById("sideB").value;
-            //alert(inputValue);
-            //convert to a number
-            sideB = parseFloat(inputValue);
-
-            //use pythagorean theorem to calculate sideC
-            sideC = Math.sqrt(sideA * sideA + sideB * sideB);
-            //display using the hypoNum
-            document.getElementById("hypoNum").innerHTML = sideC;
-
+            var c = Math.sqrt(a * a + b * b);
+            document.getElementById("hypoNum").innerHTML = c;
+            //alert(a + b + c);
         }
-    </script>
 
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
