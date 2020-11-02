@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Triangle Math</title>
+</head>
+
+<body>
+    <h1>Triangle Math</h1>
+
+    <form id="triangleData">
+        <div class="form-group">
+            <label for="sideA">Side A</label>
+            <input type="number" class="form-control" id="sideA" placeholder="Side A">
+        </div>
+        <div class="form-group">
+            <label for="sideB">Side B</label>
+            <input type="number" class="form-control" id="sideB" placeholder="Side B">
+        </div>
+        <!--
+        <div class="form-group">
+            <label for="sideC">Side C</label>
+            <input type="number" class="form-control" id="sideC" placeholder="Side C">
+        </div>
+        -->
+    </form>
+
+    <button class="btn btn-primary" onClick="alert('this works');">Calculate</button>
+
+
+    <table class="table">
+        <tr>
+            <th>Formula</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td>Area</td>
+            <td id="areaNum"></td>
+        </tr>
+        <tr>
+            <td>Perimeter</td>
+            <td id="perimeterNum"></td>
+        </tr>
+        <tr>
+            <td>Hypotenuse</td>
+            <td id="hypoNum"></td>
+        </tr>
+
+    </table>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
