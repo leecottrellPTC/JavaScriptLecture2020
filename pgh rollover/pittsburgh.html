@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pittsburgh Sports</title>
+    <style>
+        .left{
+            float:left;
+            width:20%;
+        }
+        
+    </style>
+    
+    <script>
+        function changeImage(newPic, desc){
+            document.getElementById("pghImg").src = newPic;
+            document.getElementById("pghTitle").innerHTML=desc;
+        }
+        function resetImage(){
+             document.getElementById("pghImg").src = "";
+            document.getElementById("pghTitle").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Pittsburgh Changes</h1>
+    <div class="left">
+        <h2 onmouseover="changeImage('images/1945.jpg', 'The point in 1945');"
+            onmouseout="resetImage();">1945</h2>
+        <h2 onmouseover="changeImage('images/1960.jpg', 'The point in 1960');"
+            onmouseout="resetImage();">1960</h2>
+        <h2 onmouseover="changeImage('images/2015.jpg', 'The point in 2015');"
+            onmouseout="resetImage();">2015</h2>
+    </div>
+    <div class="right">
+        <h1 id="pghTitle"></h1>
+        <img src="" id="pghImg">
+    </div>
+</body>
+</html>
