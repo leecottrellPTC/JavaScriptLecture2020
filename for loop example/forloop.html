@@ -1,0 +1,51 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Demonstration of a for loop in JavaScript</title>
+</head>
+<!--if you find that you are manually 
+    repeating yourself in code, you are doing something wrong-->
+
+<body>
+    <h1>Numbers</h1>
+    <ul>
+        <!--  <script>
+            var counter; //counter <= 100
+            for (counter = 1; counter < 1000; counter += 5) {
+                document.write("<li>" + counter + "</li>");
+            }
+        </script>
+
+        <script>
+            var x = 0;
+            for (x = 10; x >= 0; x -= .01) {
+                document.write(x + "</br>");
+            }
+        </script>
+    -->
+    </ul>
+
+    <h2>Math with loops</h2>
+    <p>Total up the numbers from 1 to 1000</p>
+    <script>
+        var num = 0;
+        var total = 0;
+        //Euler 
+        for (num = 1; num <= 1000; num++) {
+            total += num;
+        }
+        document.write("The total is " + total);
+    </script>
+
+    <p>A loop is a construct that allows you to repeat a block of code.</p>
+    <h2>Two types of loops</h2>
+    <ul>
+        <li>Definate Loop - known number of repetition</li>
+        <li>Indefinate loop - unknown number of repetitions</li>
+    </ul>
+
+
+</body>
+
+</html>
