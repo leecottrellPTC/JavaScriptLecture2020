@@ -1,0 +1,58 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Population growth</title>
+</head>
+
+<body>
+    <!--Put your content here-->
+    <form>
+        Enter starting pop for A<input type="number" id="popA">
+        <br> Enter starting pop for B<input type="number" id="popB"><br>
+    </form>
+    <button onclick="doMath();">Do the math!</button>
+
+    <h1>Stats</h1>
+    <p>How long until second population exceeds the first</p>
+    <p id="startPopA"></p>
+    <p id="popIncA"></p>
+    <p id="startPopB"></p>
+    <p id="popIncB"></p>
+    <p id="years"></p>
+    <p id="endPopA"></p>
+    <p id="endPopB"></p>
+
+    <script>
+        function doMath() {
+            var popA = 10000; //ensure a double variable
+            var popB = 5000;
+            var incA = .02;
+            var incB = .05;
+            var years = 0; //counter variable
+            //strip from screen
+            popA = parseFloat(document.getElementById("popA").value);
+            popB = parseFloat(document.getElementById("popB").value);
+
+            document.getElementById("startPopA").innerHTML = "Starting Pop A " + popA;
+            document.getElementById("startPopB").innerHTML = "Starting Pop B " + popB;
+            //while(popB < popA)
+            while (popA > popB) {
+                //must change popB in this loop
+                //if dont, infinite loop
+                popA = popA + popA * (incA);
+                //increase by percent
+                popB = popB + popB * (incB);
+                //document.write("Pop A " + popA + " PopB " + popB + "<br>");
+                years++;
+            } //end of while loop
+
+            document.getElementById("endPopA").innerHTML = "Ending Pop A " + Math.trunc(popA);
+            document.getElementById("endPopB").innerHTML = "Ending Pop B " + Math.trunc(popB);
+            document.getElementById("years").innerHTML = years;
+        } //end of doMath()
+    </script>
+
+</body>
+
+</html>
