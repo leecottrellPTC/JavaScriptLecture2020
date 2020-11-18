@@ -1,0 +1,50 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Die Roller</title>
+</head>
+
+<body>
+    <!--Put your content here-->
+    <h1 id="title">Die Roller!</h1>
+    <img src="image/allDice.png" id="die1" alt="Image of 6 dice" title="Image of 6 dice" width="150">
+    <img src="image/allDice.png" id="die2" alt="Image of 6 dice" title="Image of 6 dice" width="150">
+    <p id="dieTotal"></p>
+    <!--id anything you want to mess with in JavaScript-->
+    <!--Document Object Model (DOM)-->
+    <button onclick="rollTheDice();">Roll the dice</button>
+
+    <script>
+        var total = 0;
+
+        function rollTheDice() {
+            var dice1;
+            var dice2;
+
+
+            dice1 = Math.random() * 6 + 1; //between 1 and 6
+            dice1 = Math.trunc(dice1);
+
+            dice2 = Math.random() * 6 + 1; //between 1 and 6
+            dice2 = Math.trunc(dice2);
+
+            //alert(dice2 + " dice2");
+            //alert troubleshooting
+            //document.getElementById("title").innerHTML = dice2;
+            //console.log(dice2 + " die2");//write to console of browser
+
+            total = dice1 + dice2;
+            //object have methods and properties
+            document.getElementById("dieTotal").innerHTML = "The total is " + total;
+            //display pictures
+            document.getElementById("die1").src = "image/" + dice1 + ".png";
+            //images/1.png
+            document.getElementById("die2").src = "image/" + dice2 + ".png";
+
+        }
+    </script>
+
+</body>
+
+</html>
