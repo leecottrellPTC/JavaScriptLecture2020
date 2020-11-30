@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Array Example</title>
+</head>
+<!--if you find that you are manually 
+    repeating yourself in code, you are doing something wrong-->
+
+<body>
+    <h1>Simple exception handling</h1>
+    <p>Division by zero</p>
+    <p id="answer"></p>
+    <script>
+        try {
+            var num1 = 5;
+            var num2 = 0;
+            if (num2 == 0) {
+                throw ("Cannot divide by zero");
+            }
+            var answer = num1 / num2;
+            document.getElementById("answer").innerHTML = answer;
+        } catch (error) {
+            alert(error);
+            document.getElementById("answer").innerHTML = undefined;
+        }
+    </script>
+
+
+</body>
+
+</html>
